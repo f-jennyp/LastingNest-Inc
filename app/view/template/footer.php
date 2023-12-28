@@ -64,8 +64,7 @@
 							<nav>
 								<ul>
 									<li <?php $this->helpers->isActiveMenu("home"); ?>><a
-											href="<?php echo URL ?>">Home</a>
-									</li>
+											href="<?php echo URL ?>">Home</a></li>
 									<li <?php $this->helpers->isActiveMenu("about"); ?>><a
 											href="<?php echo URL ?>about#content">About Us</a></li>
 									<li <?php $this->helpers->isActiveMenu("services"); ?>><a
@@ -110,9 +109,9 @@
 							<label><span class="ctc-hide">Message</span>
 								<textarea name="message" cols="30" rows="10" placeholder="MESSAGE"></textarea>
 							</label>
-
+							<!-- 
 							<label for="g-recaptcha-response"><span class="ctc-hide">Recaptcha</span></label>
-							<div class="g-recaptcha"></div>
+							<div class="g-recaptcha"></div> -->
 
 							<button type="submit" class="ctcBtn btn" disabled>Submit Form</button>
 						</form>
@@ -120,24 +119,25 @@
 				</div>
 			</div>
 		</div>
+		<div class="copyrights">
+			<p class="copy">
+				Copyright
+				<?php echo date("Y"); ?>.
+				<?php $this->info("company_name"); ?> All Rights Reserved.
+			</p>
+			<p class="techno">
+				<img class="lazy loaded" src="public/images/hd-logo.png" alt=""><a
+					href="http://technodreamoutsourcing.com/">Web Design</a> Done by <a
+					href="http://technodreamoutsourcing.com/"> TechnoDream LLC</a>
+			</p>
+		</div>
 	</div>
 
 
 
 
-	<div class="copyrights">
-		<p class="copy">
-			©
-			<?php echo date("Y"); ?>.
-			<?php $this->info("company_name"); ?> All Rights Reserved.
-		</p>
-		<p class="techno">
-			<img class="lazy loaded" src="public/images/hd-logo.png" alt=""><a
-				href="http://technodreamoutsourcing.com/">Web Design</a> Done by <a
-				href="http://technodreamoutsourcing.com/"> TechnoDream LLC</a>
-		</p>
-	</div>
-	</div>
+
+
 </footer>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
