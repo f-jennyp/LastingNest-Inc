@@ -1,105 +1,123 @@
 <footer>
 	<div id="footer">
+		<div class="row flex footer-con">
+			<div class="left">
 
-		<div class="top">
+				<a href="home" class="logo"><img src="public/images/content/logo.png" alt="Logo"></a>
 
-			<a href="home" class="h-logo"><img src="public/images/common/logo.png" alt="Logo"></a>
+				<div class="box">
+					<div class="content contact-info">
+						<div class="title">CONTACT INFO</div>
+						<div class="flex">
+							<div class="con phone">
+								<img src="public/images/content/ft-phone.png" alt="">
+								<div class="text-left">
+									<a href="tel:<?php $this->info("phone"); ?>">
+										<?php $this->info("phone"); ?>
+									</a>
+								</div>
+							</div>
 
-			<div class="flex">
+							<div class="con email">
+								<img src="public/images/content/ft-email.png" alt="">
+								<div class="text-left">
+									<a href="mailto:<?php $this->info("email"); ?>">
+										<?php $this->info("email"); ?>
+									</a>
+								</div>
+							</div>
 
-				<div class="contact-info">
-					<div class="text-left phone content">
-						<img src="public/images/content/" alt="">
-						<div class="text-left">
-							<a href="tel:<?php $this->info("phone"); ?>">
-								<?php $this->info("phone"); ?>
-							</a>
-						</div>
-					</div>
-
-					<div class="text-left email content">
-						<img src="public/images/content/" alt="">
-						<div class="text-left">
-							<a href="mailto:<?php $this->info("email"); ?>">
-								<?php $this->info("email"); ?>
-							</a>
-						</div>
-					</div>
-
-					<div class="text-left location content">
-						<img src="public/images/content/" alt="">
-						<div class="text-left">
-							<a>
-								<?php $this->info("address"); ?>
-							</a>
+							<div class="con location">
+								<img src="public/images/content/ft-address.png" alt="">
+								<div class="text-left">
+									<a>
+										<?php $this->info("address"); ?>
+									</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="follow-us">
-					<a href="<?php $this->info('fb_link') ?>" target="_blank"><img src="public/images/content/"
-							alt="facebook">Facebook</a>
-					<a href="<?php $this->info('tt_link') ?>" target="_blank"><img src="public/images/content/"
-							alt="twitter">Twitter</a>
-					<a href="<?php $this->info('ig_link') ?>" target="_blank"><img src="public/images/content/"
-							alt="instagram">Instagram</a>
-					<a href="<?php $this->info('yt_link') ?>" target="_blank"><img src="public/images/content/"
-							alt="youtube">Youtube</a>
-					<a href="<?php $this->info('li_link') ?>" target="_blank"><img src="public/images/content/"
-							alt="linkedIn">LinkedIn</a>
+				<div class="box">
+					<div class="content follow-us">
+						<div class="title">FOLLOW US</div>
+						<div class="flex">
+							<a href="<?php $this->info('fb_link') ?>" target="_blank"><img
+									src="public/images/content/ft-fb.png" alt="facebook">Facebook</a>
+							<a href="<?php $this->info('tt_link') ?>" target="_blank"><img
+									src="public/images/content/ft-tw.png" alt="twitter">Twitter</a>
+							<a href="<?php $this->info('ig_link') ?>" target="_blank"><img
+									src="public/images/content/ft-ig.png" alt="instagram">Instagram</a>
+							<a href="<?php $this->info('yt_link') ?>" target="_blank"><img
+									src="public/images/content/ft-yt.png" alt="youtube">Youtube</a>
+							<a href="<?php $this->info('li_link') ?>" target="_blank"><img
+									src="public/images/content/ft-li.png" alt="linkedIn">LinkedIn</a>
+						</div>
+					</div>
 				</div>
 
-				<div class="navigate">
-					<nav>
-						<ul>
-							<li <?php $this->helpers->isActiveMenu("home"); ?>><a href="<?php echo URL ?>">Home</a></li>
-							<li <?php $this->helpers->isActiveMenu("about"); ?>><a
-									href="<?php echo URL ?>about#content">About Us</a></li>
-							<li <?php $this->helpers->isActiveMenu("services"); ?>><a
-									href="<?php echo URL ?>services#content">Services</a></li>
-							<li <?php $this->helpers->isActiveMenu("gallery"); ?>><a
-									href="<?php echo URL ?>gallery#content">Gallery</a></li>
-							<li <?php $this->helpers->isActiveMenu("testimonials"); ?>><a
-									href="<?php echo URL ?>reviews#content">Reviews</a></li>
-							<li <?php $this->helpers->isActiveMenu("contact"); ?>><a
-									href="<?php echo URL ?>contact#content">Contact Us</a></li>
-						</ul>
-					</nav>
+				<div class="box">
+					<div class="content navigate">
+						<div class="title">NAVIGATE</div>
+						<div class="flex">
+							<nav>
+								<ul>
+									<li <?php $this->helpers->isActiveMenu("home"); ?>><a
+											href="<?php echo URL ?>">Home</a>
+									</li>
+									<li <?php $this->helpers->isActiveMenu("about"); ?>><a
+											href="<?php echo URL ?>about#content">About Us</a></li>
+									<li <?php $this->helpers->isActiveMenu("services"); ?>><a
+											href="<?php echo URL ?>services#content">Services</a></li>
+									<li <?php $this->helpers->isActiveMenu("gallery"); ?>><a
+											href="<?php echo URL ?>gallery#content">Gallery</a></li>
+									<li <?php $this->helpers->isActiveMenu("testimonials"); ?>><a
+											href="<?php echo URL ?>reviews#content">Reviews</a></li>
+									<li <?php $this->helpers->isActiveMenu("contact"); ?>><a
+											href="<?php echo URL ?>contact#content">Contact Us</a></li>
+								</ul>
+							</nav>
+						</div>
+						<nav>
+					</div>
 				</div>
+
 
 			</div>
 
 
-		</div>
+			<div class="right" id="contact">
+				<div class="box">
+					<div class="contact-con">
+						<div class="foreword">CONTACT US</div>
+						<div class="contact-title">KEEP IN TOUCH</div>
 
+						<form action="sendContactForm" method="post" class="sends-email ctc-form">
 
-		<div class="right" id="contact">
-			<div class="row">
-				<div class="foreword">CONTACT US</div>
-				<div class="contact-title">KEEP IN TOUCH</div>
+							<label><span class="ctc-hide name">Name</span>
+								<input type="text" name="name" placeholder="NAME">
+							</label>
+							<div class="flex">
+								<label><span class="ctc-hide">Phone</span>
+									<input type="text" name="phone" placeholder="PHONE">
+								</label>
+								<label><span class="ctc-hide">Email</span>
+									<input type="text" name="email" placeholder="EMAIL">
+								</label>
+							</div>
 
-				<form action="sendContactForm" method="post" class="sends-email ctc-form">
-					<div class="flex">
-						<label><span class="ctc-hide">Name</span>
-							<input type="text" name="name" placeholder="Name">
-						</label>
-						<label><span class="ctc-hide">Phone</span>
-							<input type="text" name="phone" placeholder="Phone">
-						</label>
-						<label><span class="ctc-hide">Email</span>
-							<input type="text" name="email" placeholder="Email">
-						</label>
+							<label><span class="ctc-hide">Message</span>
+								<textarea name="message" cols="30" rows="10" placeholder="MESSAGE"></textarea>
+							</label>
+
+							<label for="g-recaptcha-response"><span class="ctc-hide">Recaptcha</span></label>
+							<div class="g-recaptcha"></div>
+
+							<button type="submit" class="ctcBtn btn" disabled>Submit Form</button>
+						</form>
 					</div>
-
-					<label><span class="ctc-hide">Message</span>
-						<textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
-					</label>
-
-					<label for="g-recaptcha-response"><span class="ctc-hide">Recaptcha</span></label>
-					<div class="g-recaptcha"></div>
-
-					<button type="submit" class="ctcBtn btn" disabled>Submit Form</button>
-				</form>
+				</div>
 			</div>
 		</div>
 	</div>

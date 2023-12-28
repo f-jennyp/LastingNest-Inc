@@ -114,6 +114,7 @@
 			<h1>WHAT THEY SAY</h1>
 
 			<div class="reviews-con rev-slider">
+				<div class="btn-prev-slider"></div>
 				<div class="box">
 					<div class="img-holder">
 						<img src="<?php echo URL ?>public/images/content/rev1.png" alt="">
@@ -149,71 +150,77 @@
 						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
 						ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute </div>
 				</div>
+				<div class="btn-next-slider"></div>
 			</div>
 		</div>
 	</div>
 
 	<div id="gallery">
-		<div class="row flex">
-			<div class="foreword">SERVICES</div>
-			<h1>WHAT WE DO</h1>
+		<div class="row">
+			<div class="foreword">GALLERY</div>
+			<h1>RECENT PROJECTS</h1>
 
 			<div id="gall1" class="gallery-container">
+				<div class="btn-prev-slider"></div>
 				<ul class="gallery">
 					<li>
 						<a data-fancybox-group="default" class="thumbnail fancy" title="gallery"
 							href="public/images/gallery/1.png">
-							<img class="img-responsive" src="public/images/gallery/1.png" alt="gallery">
+							<img class="img-responsive" src="public/images/gallery/1.jpg" alt="gallery">
 						</a>
 					</li>
 
 					<li>
 						<a data-fancybox-group="default" class="thumbnail fancy" title="gallery"
 							href="public/images/gallery/2.png">
-							<img class="img-responsive" src="public/images/gallery/2.png" alt="gallery">
+							<img class="img-responsive" src="public/images/gallery/2.jpg" alt="gallery">
 						</a>
 					</li>
 
 					<li>
 						<a data-fancybox-group="default" class="thumbnail fancy" title="gallery"
 							href="public/images/gallery/3.png">
-							<img class="img-responsive" src="public/images/gallery/3.png" alt="gallery">
+							<img class="img-responsive" src="public/images/gallery/3.jpg" alt="gallery">
 						</a>
 					</li>
+
+					<li>
+						<a data-fancybox-group="default" class="thumbnail fancy" title="gallery"
+							href="public/images/gallery/4.png">
+							<img class="img-responsive" src="public/images/gallery/4.jpg" alt="gallery">
+						</a>
+					</li>
+
 				</ul>
+				<div class="btn-next-slider"></div>
 				<div class="page_navigation"></div>
 			</div>
+		</div>
 
-			<div class="bellow-gal">
-				<div class="left">
-					<div class="img-holder">
-						<img src="public/images/content/" alt="">
-					</div>
-
+		<div class="bellow-gal flex">
+			<div class="left">
+				<div class="img-holder">
+					<img src="public/images/content/gallery-img.jpg" alt="">
 				</div>
 
-				<div class="right">
-					<div class="fore-w">SERVICES</div>
-					<div class="title-like">New School Building Science</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore
-						et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-						ut
-						aliquip ex ea commodo consequat.</p>
-					<div class="btn-holder">
-						<div class="btn">
-							<a href="<?php echo URL ?>about#content">LEARN MORE</a>
-						</div>
+			</div>
+
+			<div class="right">
+				<div class="fore-w">Old School Craftmanship</div>
+				<div class="title-like">New School Building Science</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+					labore
+					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+					ut
+					aliquip ex ea commodo consequat.</p>
+				<div class="btn-holder">
+					<div class="btn">
+						<a href="<?php echo URL ?>about#content">LEARN MORE</a>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<div id="about">
-		<div class="row flex">
-
-		</div>
 	</div>
 
 
