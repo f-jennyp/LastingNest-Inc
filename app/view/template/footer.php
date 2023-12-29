@@ -12,7 +12,7 @@
 							<div class="con phone">
 								<img src="public/images/content/ft-phone.png" alt="">
 								<div class="text-left">
-									<a href="tel:<?php $this->info("phone"); ?>">
+									<a class="con-hvr-underline" href="tel:<?php $this->info("phone"); ?>">
 										<?php $this->info("phone"); ?>
 									</a>
 								</div>
@@ -21,7 +21,7 @@
 							<div class="con email">
 								<img src="public/images/content/ft-email.png" alt="">
 								<div class="text-left">
-									<a href="mailto:<?php $this->info("email"); ?>">
+									<a class="con-hvr-underline" href="mailto:<?php $this->info("email"); ?>">
 										<?php $this->info("email"); ?>
 									</a>
 								</div>
@@ -43,16 +43,36 @@
 					<div class="content follow-us">
 						<div class="title">FOLLOW US</div>
 						<div class="flex">
-							<a href="<?php $this->info('fb_link') ?>" target="_blank"><img
-									src="public/images/content/ft-fb.png" alt="facebook">Facebook</a>
-							<a href="<?php $this->info('tt_link') ?>" target="_blank"><img
-									src="public/images/content/ft-tw.png" alt="twitter">Twitter</a>
-							<a href="<?php $this->info('ig_link') ?>" target="_blank"><img
-									src="public/images/content/ft-ig.png" alt="instagram">Instagram</a>
-							<a href="<?php $this->info('yt_link') ?>" target="_blank"><img
-									src="public/images/content/ft-yt.png" alt="youtube">Youtube</a>
-							<a href="<?php $this->info('li_link') ?>" target="_blank"><img
-									src="public/images/content/ft-li.png" alt="linkedIn">LinkedIn</a>
+							<div class="ft-social">
+								<img src="public/images/content/ft-fb.png" alt="facebook">
+								<a class="con-hvr-underline" href="<?php $this->info('fb_link') ?>"
+									target="_blank">Facebook</a>
+							</div>
+
+							<div class="ft-social">
+								<img src="public/images/content/ft-tw.png" alt="twitter">
+								<a class="con-hvr-underline" href="<?php $this->info('tt_link') ?>"
+									target="_blank">Twitter</a>
+							</div>
+
+							<div class="ft-social">
+								<img src="public/images/content/ft-ig.png" alt="instagram">
+								<a class="con-hvr-underline" href="<?php $this->info('ig_link') ?>"
+									target="_blank">Instagram</a>
+							</div>
+
+							<div class="ft-social">
+								<img src="public/images/content/ft-yt.png" alt="youtube">
+								<a class="con-hvr-underline" href="<?php $this->info('yt_link') ?>"
+									target="_blank">Youtube</a>
+							</div>
+
+							<div class="ft-social">
+								<img src="public/images/content/ft-li.png" alt="linkedIn">
+								<a class="con-hvr-underline" href="<?php $this->info('li_link') ?>"
+									target="_blank">LinkedIn</a>
+							</div>
+
 						</div>
 					</div>
 				</div>
@@ -63,17 +83,17 @@
 						<div class="flex">
 							<nav>
 								<ul>
-									<li <?php $this->helpers->isActiveMenu("home"); ?>><a
+									<li <?php $this->helpers->isActiveMenu("home"); ?>><a class="con-hvr-underline"
 											href="<?php echo URL ?>">Home</a></li>
-									<li <?php $this->helpers->isActiveMenu("about"); ?>><a
+									<li <?php $this->helpers->isActiveMenu("about"); ?>><a class="con-hvr-underline"
 											href="<?php echo URL ?>about#content">About Us</a></li>
-									<li <?php $this->helpers->isActiveMenu("services"); ?>><a
+									<li <?php $this->helpers->isActiveMenu("services"); ?>><a class="con-hvr-underline"
 											href="<?php echo URL ?>services#content">Services</a></li>
-									<li <?php $this->helpers->isActiveMenu("gallery"); ?>><a
+									<li <?php $this->helpers->isActiveMenu("gallery"); ?>><a class="con-hvr-underline"
 											href="<?php echo URL ?>gallery#content">Gallery</a></li>
-									<li <?php $this->helpers->isActiveMenu("testimonials"); ?>><a
+									<li <?php $this->helpers->isActiveMenu("testimonials"); ?>><a class="con-hvr-underline"
 											href="<?php echo URL ?>reviews#content">Reviews</a></li>
-									<li <?php $this->helpers->isActiveMenu("contact"); ?>><a
+									<li <?php $this->helpers->isActiveMenu("contact"); ?>><a class="con-hvr-underline"
 											href="<?php echo URL ?>contact#content">Contact Us</a></li>
 								</ul>
 							</nav>
@@ -113,7 +133,7 @@
 							<label for="g-recaptcha-response"><span class="ctc-hide">Recaptcha</span></label>
 							<div class="g-recaptcha"></div> -->
 
-							<button type="submit" class="ctcBtn btn" disabled>Submit Form</button>
+							<button type="submit" class="ctcBtn btn hvr-grow" disabled>Submit Form</button>
 						</form>
 					</div>
 				</div>
@@ -186,6 +206,26 @@
 				$('.ctcBtn').attr('disabled', true);
 			}
 		});
+
+
+		function reveal() {
+			var reveals = document.querySelectorAll(".reveal");
+
+			for (var i = 0; i < reveals.length; i++) {
+				var windowHeight = window.innerHeight;
+				var elementTop = reveals[i].getBoundingClientRect().top;
+				var elementVisible = 150;
+
+				if (elementTop < windowHeight - elementVisible) {
+					reveals[i].classList.add("active");
+				} else {
+					reveals[i].classList.remove("active");
+				}
+			}
+		}
+
+		window.addEventListener("scroll", reveal);
+
 
 	</script>
 

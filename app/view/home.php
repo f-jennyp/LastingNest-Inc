@@ -2,7 +2,7 @@
 
 	<div id="about">
 		<div class="row flex">
-			<div class="about-con">
+			<div class="about-con reveal fade-right">
 				<div class="foreword">WELCOME</div>
 				<div class="title">LASTINGNEST INC</div>
 				<p>From design and engineering to painting and cleanup, each phase requires the services of folks who
@@ -12,7 +12,7 @@
 					of each project.</p>
 
 				<div class="btn-holder">
-					<div class="btn">
+					<div class="btn hvr-grow">
 						<a href="<?php echo URL ?>about#content">LEARN MORE</a>
 					</div>
 				</div>
@@ -27,7 +27,7 @@
 			<p>COMMITTED TO OUR CRAFT</p>
 
 
-			<div class="service-con">
+			<div class="service-con reveal fade-bottom">
 				<div class="box con1">
 					<div class="box-con">
 						<div class="wrapper">
@@ -40,7 +40,7 @@
 								there should be blocking, and there is integrity in every aspect of the project.</div>
 
 							<div class="learn-m">
-								<a href="<?php echo URL ?>about#content">LEARN MORE</a>
+								<a href="<?php echo URL ?>about#content" class="hvr-underline-from-left">LEARN MORE</a>
 							</div>
 						</div>
 					</div>
@@ -60,7 +60,7 @@
 							</div>
 
 							<div class="learn-m">
-								<a href="<?php echo URL ?>about#content">LEARN MORE</a>
+								<a href="<?php echo URL ?>about#content" class="hvr-underline-from-left">LEARN MORE</a>
 							</div>
 
 						</div>
@@ -79,7 +79,7 @@
 							</div>
 
 							<div class="learn-m">
-								<a href="<?php echo URL ?>about#content">LEARN MORE</a>
+								<a href="<?php echo URL ?>about#content" class="hvr-underline-from-left">LEARN MORE</a>
 							</div>
 						</div>
 					</div>
@@ -99,7 +99,7 @@
 								being of our clients and workers</div>
 
 							<div class="learn-m">
-								<a href="<?php echo URL ?>about#content">LEARN MORE</a>
+								<a href="<?php echo URL ?>about#content" class="hvr-underline-from-left">LEARN MORE</a>
 							</div>
 						</div>
 					</div>
@@ -115,7 +115,7 @@
 
 			<div class="reviews-con rev-slider">
 				<div class="btn-prev-slider"></div>
-				<div class="box">
+				<div class="hvr-grow-shadow box">
 					<div class="img-holder">
 						<img src="<?php echo URL ?>public/images/content/rev1.png" alt="">
 					</div>
@@ -127,7 +127,7 @@
 						ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute </div>
 				</div>
 
-				<div class="box">
+				<div class="hvr-grow-shadow box">
 					<div class="img-holder">
 						<img src="<?php echo URL ?>public/images/content/rev2.png" alt="">
 					</div>
@@ -139,7 +139,7 @@
 						ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute </div>
 				</div>
 
-				<div class="box">
+				<div class="hvr-grow-shadow box">
 					<div class="img-holder">
 						<img src="<?php echo URL ?>public/images/content/rev3.png" alt="">
 					</div>
@@ -198,7 +198,7 @@
 		</div>
 
 		<div class="bellow-gal flex">
-			<div class="left">
+			<div class="left reveal fade-left">
 				<div class="img-holder">
 					<img src="public/images/content/gallery-img.jpg" alt="">
 				</div>
@@ -214,7 +214,7 @@
 					ut
 					aliquip ex ea commodo consequat.</p>
 				<div class="btn-holder">
-					<div class="btn">
+					<div class="btn hvr-grow">
 						<a href="<?php echo URL ?>about#content">LEARN MORE</a>
 					</div>
 				</div>
