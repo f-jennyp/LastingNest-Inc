@@ -91,7 +91,8 @@
 											href="<?php echo URL ?>services#content">Services</a></li>
 									<li <?php $this->helpers->isActiveMenu("gallery"); ?>><a class="con-hvr-underline"
 											href="<?php echo URL ?>gallery#content">Gallery</a></li>
-									<li <?php $this->helpers->isActiveMenu("testimonials"); ?>><a class="con-hvr-underline"
+									<li <?php $this->helpers->isActiveMenu("testimonials"); ?>><a
+											class="con-hvr-underline"
 											href="<?php echo URL ?>reviews#content">Reviews</a></li>
 									<li <?php $this->helpers->isActiveMenu("contact"); ?>><a class="con-hvr-underline"
 											href="<?php echo URL ?>contact#content">Contact Us</a></li>
@@ -163,8 +164,57 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="<?php echo URL; ?>public/scripts/sendform.js" data-view="<?php echo $view; ?>" id="sendform"></script>
 <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  -->
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="public/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+<script type="text/javascript" src="public/scripts/jquery.pajinate.js"></script>
 <script src="<?php echo URL; ?>public/scripts/responsive-menu.js"></script>
 <script src="https://unpkg.com/sweetalert2@7.20.10/dist/sweetalert2.all.js"></script>
+
+<script>
+	// HEADER FIXED
+	document.addEventListener("DOMContentLoaded", function () {
+		var header = document.getElementById("header");
+		var logoImg = document.querySelector("#header .logo-holder img");
+
+		function updateHeader() {
+			if (window.scrollY > 0) {
+				header.classList.add("fixed");
+			} else {
+				header.classList.remove("fixed");
+			}
+
+			// Resize logo image based on scroll position
+			var maxImgWidth = 285;
+			var scrolledPercentage = Math.min(1, window.scrollY / 100); // You can adjust the factor based on your design
+			var newImgWidth = maxImgWidth + (1 - scrolledPercentage) * (logoImg.width - maxImgWidth);
+			logoImg.style.maxWidth = newImgWidth + "px";
+		}
+
+		// Initial call to set header and image size
+		updateHeader();
+
+		window.addEventListener("scroll", function () {
+			updateHeader();
+
+			// Check if scroll position is at the top
+			if (window.scrollY === 0) {
+				// Reset the image size when back at the top
+				logoImg.style.maxWidth = "434px"; // Adjust the original max-width value
+			}
+		});
+	});
+
+	$(document).ready(function () {
+			$('#gall1').pajinate({ num_page_links_to_display: 3, items_per_page: 4 });
+			$('.fancy').fancybox({
+				helpers: {
+					title: {
+						type: 'over'
+					}
+				}
+			});
+		})
+</script>
 
 <?php if ($this->siteInfo['cookie']): ?>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
@@ -231,21 +281,6 @@
 
 <?php endif; ?>
 
-
-<?php if ($view == "gallery"): ?>
-	<script src="<?php echo URL; ?>public/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
-	<script src="<?php echo URL; ?>public/scripts/jquery.pajinate.js"></script>
-	<script>
-		$('#gall1').pajinate({ num_page_links_to_display: 3, items_per_page: 10 });
-		$('.fancy').fancybox({
-			helpers: {
-				title: {
-					type: 'over'
-				}
-			}
-		});
-	</script>
-<?php endif; ?>
 
 <a class="cta" href="tel:<?php $this->info("phone"); ?>"><span
 		style="display: block; width: 1px; height: 1px; overflow: hidden;">Call To Action Button</span></a>

@@ -24,9 +24,11 @@
 <body <?php $this->helpers->bodyClasses($view); ?>>
 	<?php $this->checkSuspensionHeader(); ?>
 	<header>
-		<div id="header">
+		<div id="header" class="">
 			<div class="flex">
-				<a href="home" class="h-logo"><img src="public/images/content/logo.png" alt="Logo"></a>
+				<div class="left logo-holder">
+					<a href="home"><img loading="lazy" src="public/images/content/logo.png" alt="Logo"></a>
+				</div>
 
 				<div class="nav-holder">
 					<nav>

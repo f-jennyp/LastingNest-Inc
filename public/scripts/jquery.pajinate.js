@@ -26,10 +26,10 @@
 			num_page_links_to_display : 20,			
 			start_page : 0,
 			wrap_around : false,
-			nav_label_first : 'First',
-			nav_label_prev : 'Prev',
-			nav_label_next : 'Next',
-			nav_label_last : 'Last',
+			// nav_label_first : 'First',
+			nav_label_prev : '<',
+			nav_label_next : '>',
+			// nav_label_last : 'Last',
 			nav_order : ["first", "prev", "num", "next", "last"],
 			nav_label_info : 'Showing {0}-{1} of {2} results',
             show_first_last: true,
@@ -72,19 +72,19 @@
 			// Construct the nav bar
 			var more = '<span class="ellipse more">...</span>';
 			var less = '<span class="ellipse less">...</span>';
-            var first = !options.show_first_last ? '' : '<a class="first_link '+ jquery_ui_default_class +'" href="">'+ options.nav_label_first +'</a>';
-            var last = !options.show_first_last ? '' : '<a class="last_link '+ jquery_ui_default_class +'" href="">'+ options.nav_label_last +'</a>';
+            // var first = !options.show_first_last ? '' : '<a class="first_link '+ jquery_ui_default_class +'" href="">'+ options.nav_label_first +'</a>';
+            // var last = !options.show_first_last ? '' : '<a class="last_link '+ jquery_ui_default_class +'" href="">'+ options.nav_label_last +'</a>';
 			
 			var navigation_html = "";
 			
 			for(var i = 0; i < options.nav_order.length; i++) {
 				switch (options.nav_order[i]) {
-				case "first":
-					navigation_html += first;
-					break;
-				case "last":
-					navigation_html += last;
-					break;
+				// case "first":
+				// 	navigation_html += first;
+				// 	break;
+				// case "last":
+				// 	navigation_html += last;
+				// 	break;
 				case "next":
 					navigation_html += '<a class="next_link '+ jquery_ui_default_class +'" href="">'+ options.nav_label_next +'</a>';
 					break;
@@ -297,17 +297,17 @@
         /* Add the style class ".no_more" to the first/prev and last/next links to allow custom styling */
     	function tagNextPrev() {
 			if($nav_panels.children('.last').hasClass('active_page')){
-				$nav_panels.children('.next_link').add('.last_link').addClass('no_more ' + jquery_ui_disabled_class);
+				$nav_panels.children('.next_link').addClass('no_more ' + jquery_ui_disabled_class);
 			} else {
-				$nav_panels.children('.next_link').add('.last_link').removeClass('no_more ' + jquery_ui_disabled_class);
+				$nav_panels.children('.next_link').removeClass('no_more ' + jquery_ui_disabled_class);
 			}
-			
+		
 			if($nav_panels.children('.first').hasClass('active_page')){
-				$nav_panels.children('.previous_link').add('.first_link').addClass('no_more ' + jquery_ui_disabled_class);
+				$nav_panels.children('.previous_link').addClass('no_more ' + jquery_ui_disabled_class);
 			} else {
-				$nav_panels.children('.previous_link').add('.first_link').removeClass('no_more ' + jquery_ui_disabled_class);
+				$nav_panels.children('.previous_link').removeClass('no_more ' + jquery_ui_disabled_class);
 			}
-		}
+		}		
 		
 	};
 	

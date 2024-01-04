@@ -279,19 +279,31 @@ img {
 #header {
   background: url("../images/content/bg-header.png") no-repeat bottom;
   background-size: cover;
-  min-height: 220px;
-  position: fixed;
   width: 100%;
   right: 0;
   align-items: center;
   z-index: 1;
 }
 
+
+#header.fixed {
+  position: fixed;
+  background-color: rgb(255 255 255 / 90%);
+  min-height: 70px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#header.fixed .logo-holder img {
+  max-width: 285px;
+  transition: max-width 0.3s ease;
+  padding-top: 10px;
+}
+
 #header .flex {
   align-items: flex-start;
 }
 
-#header .h-logo img {
+#header .logo-holder img {
   max-width: 434px;
   padding: 17px 0 0 54px;
 }
@@ -365,11 +377,13 @@ nav ul li a {
 #banner .banner-con {
   display: inline-block;
   width: 100%;
+  max-width: 1126px;
   text-align: left;
   color: #fff;
   /* top: 49%; */
   transform: translate(5%, 0);
   /* left: 0; */
+  margin: 0 auto 0 0;
 }
 
 #banner .ban-title {
@@ -732,7 +746,7 @@ nav ul li a {
 
 #gallery .btn-prev-slider,
 #gallery .btn-next-slider {
-  top: 31%;
+  top: 30%;
   transform: translate(0, 50%);
 }
 
@@ -1155,8 +1169,7 @@ form .alert-danger {
 
 /*inner gallery*/
 .img-responsive {
-  width: 346px;
-  height: 346px;
+  max-width: 346px;
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: 13px;
@@ -1195,6 +1208,7 @@ form .alert-danger {
 
 #content .page_navigation {
   display: inline-block;
+  margin-top: 65px;
 }
 
 #content .page_link,
@@ -1203,22 +1217,18 @@ form .alert-danger {
 #content .first_link,
 #content .last_link,
 #content .ellipse {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  color: #0275d8;
   display: inline-block;
   line-height: 1.25;
-  margin-left: -1px;
   padding: 0.5rem 0.75rem;
   position: relative;
+  font-size: 18px;
 }
 
 #content .page_navigation>a:hover,
 .page_navigation>a.active_page {
-  background-color: #eceeef;
-  border-color: #ddd;
-  color: #014c8c;
+  color: #FE8000;
   text-decoration: none;
+  font-weight: 900;
 }
 
 .inner #content .gallery-container {
@@ -1241,6 +1251,18 @@ form .alert-danger {
 
 
 /*RESPONSIVE*/
+@media screen and (max-width: 1545px) {
+  #header .flex {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  #header .nav-holder {
+    max-width: 100%;
+    border-radius: 0;
+  }
+}
+
 @media screen and (max-width: 1440px) {}
 
 
@@ -1250,6 +1272,28 @@ form .alert-danger {
 @media screen and (max-width: 1200px) {
   body {
     min-width: 320px
+  }
+
+  #banner .banner-con {
+    transform: none;
+  }
+
+  #about .row {
+    top: 10%;
+  }
+
+  #services {
+    display: block;
+    padding-top: 507px;
+    margin-top: -576px;
+  }
+
+  #services .service-con {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+    margin-top: 40px;
   }
 }
 
