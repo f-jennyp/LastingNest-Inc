@@ -82,7 +82,7 @@
 						<div class="title">NAVIGATE</div>
 						<div class="flex">
 							<nav>
-								<ul>
+								<ul class="flex">
 									<li <?php $this->helpers->isActiveMenu("home"); ?>><a class="con-hvr-underline"
 											href="<?php echo URL ?>">Home</a></li>
 									<li <?php $this->helpers->isActiveMenu("about"); ?>><a class="con-hvr-underline"
@@ -205,15 +205,40 @@
 	});
 
 	$(document).ready(function () {
-			$('#gall1').pajinate({ num_page_links_to_display: 3, items_per_page: 4 });
-			$('.fancy').fancybox({
-				helpers: {
-					title: {
-						type: 'over'
-					}
+		var numPageLinks = 3;
+		var itemsPerPage = 4;
+		var $gall1 = $('#gall1');
+
+		function initializePajinate() {
+			$gall1.pajinate({ num_page_links_to_display: numPageLinks, items_per_page: itemsPerPage });
+		}
+
+		initializePajinate();
+
+		$('.fancy').fancybox({
+			helpers: {
+				title: {
+					type: 'over'
 				}
-			});
-		})
+			}
+		});
+
+		$(window).resize(function () {
+			if (window.innerWidth <= 1200) {
+				itemsPerPage = 3;
+			} else if (window.innerWidth <= 959) {
+				itemsPerPage = 2;
+			} else {
+				// Reset to default values for smaller screens
+				itemsPerPage = 4;
+			}
+
+
+			initializePajinate();
+		});
+
+	});
+
 </script>
 
 <?php if ($this->siteInfo['cookie']): ?>
@@ -280,10 +305,6 @@
 	</script>
 
 <?php endif; ?>
-
-
-<a class="cta" href="tel:<?php $this->info("phone"); ?>"><span
-		style="display: block; width: 1px; height: 1px; overflow: hidden;">Call To Action Button</span></a>
 
 <?php $this->checkSuspensionFooter(); ?>
 </body>

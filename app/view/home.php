@@ -113,42 +113,50 @@
 			<div class="foreword">REVIEWS</div>
 			<h1>WHAT THEY SAY</h1>
 
-			<div class="reviews-con rev-slider">
+			<div class="reviews-con">
 				<div class="btn-prev-slider"></div>
-				<div class="hvr-grow-shadow box">
-					<div class="img-holder">
-						<img src="<?php echo URL ?>public/images/content/rev1.png" alt="">
+				<div class="wrapper">
+					<div class="hvr-grow-shadow box box1">
+						<div class="img-holder">
+							<img src="<?php echo URL ?>public/images/content/rev1.png" alt="">
+						</div>
+
+						<div class="auth">KEN H.</div>
+						<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+						<div class="remarks">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+							tempor
+							incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+							exercitation
+							ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute </div>
 					</div>
 
-					<div class="auth">KEN H.</div>
-					<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-					<div class="remarks">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-						ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute </div>
-				</div>
+					<div class="hvr-grow-shadow box box2">
+						<div class="img-holder">
+							<img src="<?php echo URL ?>public/images/content/rev2.png" alt="">
+						</div>
 
-				<div class="hvr-grow-shadow box">
-					<div class="img-holder">
-						<img src="<?php echo URL ?>public/images/content/rev2.png" alt="">
+						<div class="auth">SHEILA S.</div>
+						<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+						<div class="remarks">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+							tempor
+							incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+							exercitation
+							ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute </div>
 					</div>
 
-					<div class="auth">SHEILA S.</div>
-					<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-					<div class="remarks">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-						ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute </div>
-				</div>
+					<div class="hvr-grow-shadow box box3">
+						<div class="img-holder">
+							<img src="<?php echo URL ?>public/images/content/rev3.png" alt="">
+						</div>
 
-				<div class="hvr-grow-shadow box">
-					<div class="img-holder">
-						<img src="<?php echo URL ?>public/images/content/rev3.png" alt="">
+						<div class="auth">MAC M. </div>
+						<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+						<div class="remarks">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+							tempor
+							incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+							exercitation
+							ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute </div>
 					</div>
-
-					<div class="auth">MAC M. </div>
-					<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-					<div class="remarks">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-						ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute </div>
 				</div>
 				<div class="btn-next-slider"></div>
 			</div>
